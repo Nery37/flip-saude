@@ -11,7 +11,7 @@
 - Docker e docker-compose
 - Make
 
-#### Coleçao do postman com exemplos no arquivo "Flip Saude.postman_collection
+#### Coleçao do postman com exemplos no arquivo "Flip Saude.postman_collection" dentro da pasta "collection"
 
 ## Variaveis de ambiente
 ```bash
