@@ -31,8 +31,8 @@ Route::group(['prefix' => 'user'], function () {
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::group(['prefix' => 'task'], function () {
 
-        Route::get('', [TasksController::class, 'index'])->name('task-store');
-        Route::get('/{id}', [TasksController::class, 'show'])->name('task-store');
+        Route::get('', [TasksController::class, 'index'])->name('task-list');
+        Route::get('/{id}', [TasksController::class, 'show'])->name('task-show');
         Route::post('', [TasksController::class, 'storeTask'])->name('task-store');
 
         Route::group(['middleware' => 'CheckTaskOwner'], function () {
