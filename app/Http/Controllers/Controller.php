@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use Exception;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -49,7 +50,11 @@ class Controller extends BaseController
         try {
             return response()->json($this->service->find($id));
         } catch (\Exception $exception) {
-            return $this->undefinedErrorResponse($exception->getMessage(), $exception->getCode());
+            $code = $exception->getCode();
+            if($exception instanceof ModelNotFoundException ){
+                $code = ResponseAlias::HTTP_NOT_FOUND;
+            }
+            return $this->undefinedErrorResponse($exception->getMessage(), $code);
         }
     }
 
@@ -270,16 +275,11 @@ class Controller extends BaseController
      *
      * @return JsonResponse
      */
-    protected function undefinedErrorResponse(string $message, int $code): JsonResponse
+    protected function undefinedErrorResponse(string $message, $code): JsonResponse
     {
-        try {
-            return response()->json(
-                [
-                    'message' => [$message],
-                ],
-                $code
-            );
-        } catch (Exception) {
+        $code = intval($code);
+
+        if ($code < 100 || $code > 599) {
             return response()->json(
                 [
                     'message' => $message,
@@ -287,5 +287,12 @@ class Controller extends BaseController
                 500
             );
         }
+
+        return response()->json(
+            [
+                'message' => [$message],
+            ],
+            $code
+        );
     }
 }

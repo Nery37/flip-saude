@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
-
 Route::any('/{any}', function () {
-    return redirect('/');
+    return redirect('/api/health');;
 })->where('any', '.*');
