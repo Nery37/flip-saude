@@ -13,6 +13,11 @@
 
 #### Coleçao do postman com exemplos no arquivo "Flip Saude.postman_collection
 
+## Variaveis de ambiente
+```bash
+Renomear o arquivo .env.example para .env
+```
+
 ## Instalação
 
 ### Instale o MAKE
