@@ -4,6 +4,7 @@ install:
 	make up
 	make composer-install
 	make migrate
+	make permission
 
 up:
 	docker-compose up -d
@@ -13,6 +14,9 @@ down:
 
 bash:
 	docker exec -it $(CONTAINER_NAME) sh
+
+permission:
+	docker exec -it $(CONTAINER_NAME) sh -c "chmod -R 777 ./"
 
 build:
 	docker-compose build
