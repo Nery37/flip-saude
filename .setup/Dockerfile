@@ -30,7 +30,7 @@ RUN chown -R www-data:www-data $DOCUMENT_ROOT \
     && chown -R www-data:www-data /var/log/nginx \
     && chown -R www-data:www-data /var/log/supervisor
 
-RUN chmod 777 /var/www/html
+RUN chmod 777 -R /var/www/html
 
 # Installing composer
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php

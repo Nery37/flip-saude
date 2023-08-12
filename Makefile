@@ -24,7 +24,6 @@ composer-install:
 	make up
 	docker exec -t $(CONTAINER_NAME) composer install
 	docker exec -t $(CONTAINER_NAME) php artisan key:generate
-	docker exec -t $(CONTAINER_NAME) chmod -R 777 ./
 
 migrate:
 	docker exec $(CONTAINER_NAME) php artisan migrate --path=/database/migrations --seed --force
