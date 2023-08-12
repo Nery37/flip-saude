@@ -22,7 +22,7 @@ class TaskCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|string',
+            'title' => 'required|string|max:255',
             'description' => 'required|string',
             'status_id' => 'required|numeric|exists:status,id'
         ];
@@ -36,6 +36,7 @@ class TaskCreateRequest extends FormRequest
         return [
             'title.required' => 'Título é obrigatório',
             'title.string' => 'Título deve ser um texto',
+            'title.max' => 'Título deve ter no máximo 255 caracteres',
 
             'description.required' => 'Descrição é obrigatória',
             'description.string' => 'Descrição deve ser um texto',
