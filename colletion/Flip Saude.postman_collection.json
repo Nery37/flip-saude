@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "aea08493-a729-4b6c-8a52-8dd67244a6ab",
+		"_postman_id": "9cba8e3b-da5e-43d6-bdde-18cb108c7155",
 		"name": "Flip Saude",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "11163004"
@@ -66,15 +66,6 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "localhost:8100/api/task",
 									"host": [
@@ -178,15 +169,6 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "localhost:8100/api/task",
 									"host": [
@@ -290,15 +272,6 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "localhost:8100/api/task",
 									"host": [
@@ -1520,15 +1493,6 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "localhost:8100/api/task/5",
 									"host": [
@@ -1666,7 +1630,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\" : \"jason@hotmail.com\",\r\n    \"password\" : \"123456789\"\r\n}",
+							"raw": "{\r\n    \"email\" : \"jaychristopher@hotmail.com\",\r\n    \"password\" : \"123456789\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
