@@ -1093,7 +1093,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"error\": \"Usuário sem permissão\"\n}"
+							"body": "{\n    \"error\": \"Access denied.\"\n}"
 						},
 						{
 							"name": "Delete",
@@ -1345,7 +1345,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"error\": \"Usuário sem permissão\"\n}"
+							"body": "{\n    \"error\": \"Access denied.\"\n}"
 						},
 						{
 							"name": "Update",

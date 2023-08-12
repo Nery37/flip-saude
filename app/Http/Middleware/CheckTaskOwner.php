@@ -33,7 +33,7 @@ class CheckTaskOwner
     {
         $task = $this->repository->skipPresenter()->find($request->route('id'));
         if (!$task || Auth::id() !== $task->user_id) {
-            return response()->json(['error' => 'Usuário sem permissão'], 403);
+            return response()->json(['error' => 'Access denied.'], 403);
         }
 
         return $next($request);
