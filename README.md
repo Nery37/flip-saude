@@ -94,9 +94,8 @@ Execute o make bash e e depois o comando abaixo
 php artisan make:entity NomeDaEntidade
 ```
 
-Para mais informaçoes sobre CRUD e o Repositorio Acessar documentaçao do L5-Repository
+Para mais informações sobre CRUD e o Repositório, acessar documentação do L5-Repository.
 
-#### outros comandos veja o makefile.
 
 
 
