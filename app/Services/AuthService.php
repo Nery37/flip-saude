@@ -6,13 +6,12 @@ namespace App\Services;
 
 use App\Entities\User;
 use App\Enums\TokenAbilityEnum;
+use App\Exceptions\UnauthorizedException;
 use Carbon\Carbon;
 use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Support\Facades\Auth;
 use Prettus\Repository\Contracts\RepositoryInterface;
 use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\ValidationException;
 
 class AuthService extends AppService
 {
@@ -41,9 +40,7 @@ class AuthService extends AppService
         $user = $this->repository->where('email', $data['email'])->first();
 
         if(! $user || ! Hash::check($data['password'], $user->password)){
-            throw ValidationException::withMessages([
-                'email' => ['The provided credentials are incorrect']
-            ]);
+            throw new UnauthorizedException("The provided credentials are incorrect");
         }
         $this->logout($user);
         return ['data' => $this->generateAccessToken($user)];

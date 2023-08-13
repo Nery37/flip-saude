@@ -48,7 +48,7 @@ class AuthController extends Controller
         try {
             $this->service->logout($request->user());
             return $this->successResponse([
-                'message' => 'Successfully logged out'
+                'message' => 'Successfully logged out.'
             ]);
         } catch (\Exception $exception) {
             return $this->undefinedErrorResponse($exception->getMessage(), $exception->getCode());

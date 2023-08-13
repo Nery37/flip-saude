@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "9cba8e3b-da5e-43d6-bdde-18cb108c7155",
+		"_postman_id": "667d50a0-9974-460e-b996-e8994495df21",
 		"name": "Flip Saude",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "11163004"
@@ -1585,6 +1585,99 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"data\": {\n        \"id\": 5,\n        \"title\": \"Create music\",\n        \"description\": \"Lorem ipsum dolor sit amet. Aut placeat enim ut cumque veniam sit vero libero. Aut saepe officiis eum illum sunt cum repellendus aliquam ut accusantium aliquam qui laborum excepturi. At aspernatur doloribus sit sunt saepe ut dolor rerum hic saepe voluptatum!\",\n        \"status_id\": \"Concluído\",\n        \"user_id\": 2,\n        \"created_at\": \"2023-08-12 14:56:56\",\n        \"updated_at\": \"2023-08-12 14:56:56\"\n    }\n}"
+						},
+						{
+							"name": "Show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Device",
+										"value": "mobile",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8100/api/task/5",
+									"host": [
+										"localhost"
+									],
+									"port": "8100",
+									"path": [
+										"api",
+										"task",
+										"5"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 13 Aug 2023 00:14:06 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": [\n        \"No query results for model [App\\\\Entities\\\\Task] 5\"\n    ]\n}"
 						}
 					]
 				}
@@ -1651,91 +1744,6 @@
 						}
 					},
 					"response": [
-						{
-							"name": "Login",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Device",
-										"value": "mobile",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"email\" : \"jaychristopher@hotmail.com\",\r\n    \"password\" : \"123456789\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:8100/api/auth/login",
-									"host": [
-										"localhost"
-									],
-									"port": "8100",
-									"path": [
-										"api",
-										"auth",
-										"login"
-									]
-								}
-							},
-							"status": "Internal Server Error",
-							"code": 500,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.20.2"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.9"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 12 Aug 2023 14:51:04 GMT"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "58"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Strict-Transport-Security",
-									"value": "max-age=31536000; includeSubDomains"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"The provided credentials are incorrect\"\n}"
-						},
 						{
 							"name": "Login",
 							"originalRequest": {
@@ -1848,6 +1856,91 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"data\": {\n        \"access_token\": \"5|z6btBqYLKzmki2oe7IUVKpCrJ87a1WD5EBwWnZHa\",\n        \"refresh_token\": \"6|ZpBiRoeQO3uwFKZPAaQOAkAfLb4E8mgeSJHQ1JXS\",\n        \"token_type\": \"Bearer\"\n    }\n}"
+						},
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Device",
+										"value": "mobile",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"jaychristopher@hotmail.com\",\r\n    \"password\" : \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8100/api/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8100",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 13 Aug 2023 00:13:25 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": [\n        \"The provided credentials are incorrect\"\n    ]\n}"
 						}
 					]
 				},
