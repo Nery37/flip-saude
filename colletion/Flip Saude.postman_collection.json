@@ -1940,7 +1940,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"message\": [\n        \"The provided credentials are incorrect\"\n    ]\n}"
+							"body": "{\n    \"message\": [\n        \"The provided credentials are incorrect.\"\n    ]\n}"
 						}
 					]
 				},

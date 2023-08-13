@@ -40,7 +40,7 @@ class AuthService extends AppService
         $user = $this->repository->where('email', $data['email'])->first();
 
         if(! $user || ! Hash::check($data['password'], $user->password)){
-            throw new UnauthorizedException("The provided credentials are incorrect");
+            throw new UnauthorizedException("The provided credentials are incorrect.");
         }
         $this->logout($user);
         return ['data' => $this->generateAccessToken($user)];
